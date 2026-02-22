@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+/*==========================================
+    BASE STYLES
+  ==========================================*/
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #918a8a;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(78, 7, 105);
+}
+
+/*==========================================
+    LAYOUT COMPONENTS
+  ==========================================*/
+header {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(143, 8, 8);
+}
+h2 {
+  color: rgb(122, 76, 49);
+}
+h3 {
+  color: rgb(14, 21, 82);
+}
+
+/* Unified Nav Styling */
+nav {
+  text-align: center;
+}
+nav a {
+  color: rgb(43, 54, 126);
+}
+
+header nav {
+  width: 25%;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border-style: double;
+  background-color: #dbdbca;
+}
+header nav a {
+  margin: 2rem;
+}
+
+/* FOOTER */
+footer {
+  padding: 1rem 2rem;
+  background-color: #dbdbca;
+}
+
+/*==========================================
+    CONTENT SECTIONS
+  ==========================================*/
+#key_notes,
+#media {
+  padding: 2rem 3rem;
+  border-radius: 18px;
+  border-style: dotted;
+  background-color: #b9b9a9;
+}
+
+.topic {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border-style: groove;
+  background-color: #dbdbca;
+}
+
+.section_nav {
+  margin: 0 auto 1rem;
+  padding: 1rem 0.5rem;
+  width: 40%;
+  border-radius: 8px;
+  background-color: aliceblue;
+}
+.section_nav a {
+  margin: 1rem;
+  border-radius: 8px;
+  background-color: aliceblue;
+}
+
+/*==========================================
+    TABLES & MEDIA
+  ==========================================*/
+table {
+  width: 100%;
+  text-align: center;
+  border: 2px solid #333;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  padding: 1rem;
+  border: 1px solid #333;
+}
+
+iframe,
+video {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* TEST PAGE */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

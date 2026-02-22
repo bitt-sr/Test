@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        margin: 2rem 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: #ffffff;
+        background-color: #363535;
+      }
+      main {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      a {
+        color: rgb(78, 7, 105);
+        text-decoration: none;
+      }
+
+      /* Simple CSS to handle spacing without using <br> */
+      .form-field {
+        margin-bottom: 2rem; /* Space between rows */
+      }
+
+      fieldset {
+        border: 1px dashed #ccc; /* Standard border */
+        padding: 1.5rem;
+        border-radius: 5px;
+      }
+      /* Example of a borderless fieldset for sub-questions */
+      .borderless {
+        border: none;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html#form">Back</a>
+      <a href="./Form2.html">| Sample 2</a>
+    </nav>
+
+    <main>
+      <h1>Sample Form</h1>
+
+      <section class="sform">
+        <form>
+          <fieldset>
+            <legend>Personal info</legend>
+            <div class="form-field">
+              <label for="fName">First Name:</label>
+              <input type="text" id="fName" name="fName" />
+            </div>
+
+            <div class="form-field">
+              <label for="lName">Last Name: </label>
+              <input type="text" id="lName" name="lName" />
+            </div>
+
+            <fieldset class="borderless">
+              <legend>Gender:</legend>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+            </fieldset>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Background</legend>
+
+            <div class="form-field">
+              <span class="question-text">Enrolled in College/University?</span>
+              <input type="radio" id="yes" name="enrolled_status" value="yes" />
+              <label for="yes">Yes</label>
+
+              <input type="radio" id="no" name="enrolled_status" value="no" />
+              <label for="no">No</label>
+            </div>
+
+            <div class="form-field">
+              <label for="uni_name">College/University</label>
+              <select name="level" id="uni_name">
+                <option value="">Select</option>
+                <option value="UPSA">UPSA</option>
+                <option value="University of Ghana">University of Ghana</option>
+                <option value="KNUST">KNUST</option>
+                <option value="UMAT">UMAT</option>
+                <option value="other">other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="lvl">Current Level:</label>
+              <select name="level" id="lvl">
+                <option value="">Select</option>
+                <option value="100">lvl 100</option>
+                <option value="200">lvl 200</option>
+                <option value="300">lvl 300</option>
+                <option value="400">lvl 400</option>
+                <option value="other">Other(diploma etc)</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="reg-proof">Proof of registration:</label>
+              <input type="file" id="reg-proof" name="reg-proof" />
+            </div>
+
+            <fieldset class="borderless form-field">
+              <legend>Tech Skills:</legend>
+              <input type="checkbox" id="html" name="skills" value="html" />
+              <label for="html">HTML</label>
+
+              <input type="checkbox" id="css" name="skills" value="css" />
+              <label for="css">CSS</label>
+
+              <input type="checkbox" id="js" name="skills" value="javascript" />
+              <label for="js">Javascript</label>
+
+              <input
+                type="checkbox"
+                id="vc"
+                name="skills"
+                value="version-control"
+              />
+              <label for="vc">Version Control</label>
+            </fieldset>
+
+            <div class="">
+              <label for="about">About you:</label>
+              <textarea id="about"></textarea>
+            </div>
+          </fieldset>
+
+          <br />
+          <div class="">
+            <button type="reset">Clear Form</button>
+
+            <button>Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

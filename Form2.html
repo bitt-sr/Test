@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        margin: 2rem 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: #ffffff;
+        background-color: #363535;
+      }
+      main {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      a {
+        color: rgb(78, 7, 105);
+        text-decoration: none;
+      }
+
+      /* Simple CSS to handle spacing without using <br> */
+      .form-field {
+        margin-bottom: 2rem; /* Space between rows */
+      }
+
+      fieldset {
+        border: 1px dashed #ccc; /* Standard border */
+        padding: 1.5rem;
+        border-radius: 5px;
+      }
+      /* Example of a borderless fieldset for sub-questions */
+      .borderless {
+        border: none;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./Form.html">back</a>
+
+    <main>
+      <section class="sform">
+        <section class="readonlyNdisabled">
+          <p><q>Disabled</q> attribute in action</p>
+          <form>
+            <label>
+              <input
+                type="checkbox"
+                id="terms-checkbox"
+                onclick="toggleButton()"
+              />
+              I agree to the Terms and Conditions
+            </label>
+
+            <br /><br />
+
+            <button type="submit" id="submit-btn" disabled>
+              <img src="pic.jpg" alt="" width="20" />
+              Complete Registration
+            </button>
+          </form>
+
+          <script>
+            function toggleButton() {
+              const checkbox = document.getElementById("terms-checkbox");
+              const button = document.getElementById("submit-btn");
+
+              // If checkbox is checked, remove the 'disabled' attribute.
+              // Otherwise, add it back.
+              button.disabled = !checkbox.checked;
+            }
+          </script>
+
+          <br /><br />
+
+          <p><q>readonly</q> attribute in action</p>
+          <form>
+            <label for="promo">Promo Code:</label>
+            <input
+              type="text"
+              id="promo"
+              name="promo_code"
+              placeholder="Enter code..."
+            />
+
+            <br /><br />
+
+            <label for="total">Order Total (USD):</label>
+            <input
+              type="text"
+              id="total"
+              name="order_total"
+              value="149.50"
+              readonly
+            />
+
+            <br /><br />
+            <button type="submit">Place Order</button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
